@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Contact List</title>
+  <link rel="stylesheet" type="text/css" href="/bower_components/semantic-ui/dist/semantic.css">
+  <!-- <link rel="stylesheet" href="animate.css"> -->
+</head>
+<body>
+  <h1>Testing...Hello world</h1>
+  <div class="ui grid">
+    <div class="two column centered row">
+      <div class="six wide column">
+        <div class="ui segment">
+
+          <div class="ui dropdown">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select Category</div>
+            <div data-attr="category-list" class="menu">
+              <!-- <div class="item" data-value="test1">Category 1</div>
+              <div class="item" data-value="test2">Category 2</div> -->
+              
+              <script type="text/template" data-id="category-items">
+                <div class="item" data-value="{{id}}">{{name}}</div>
+              </script>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      <div data-id="new-category" class="eight wide column">
+        <div data-action="create-category" class="ui button">
+          Create New Catogory
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+    <div class="ui three column centered grid">
+      <div class="five wide column">
+        <div class="ui segment">
+
+          <div data-attr="category-label" class="ui pointing huge below label">
+          Category Name
+          </div>
+          
+          <div data-attr="contact-list" class="ui divided big list">
+            
+            <div class="item">
+              <div class="right floated compact circular ui button">Details</div>
+              <div class="content">
+                <div class="header">Justen Kitsune</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="right floated compact circular ui button">Details</div>
+              <img class="ui avatar image" src="/images/avatar/small/joe.jpg">
+              <div class="content">
+                <div class="header">Joe Henderson</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="right aligned column">
+        <div style="border: 1px solid black;">
+          <div class="ui segment">
+            <div data-action="create-contact" class="fluid ui button">
+              Create New Contact
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div style="border: 1px solid black;">
+          <div class="ui segment"></div>
+        </div>
+      </div>
+
+      <!-- <div class="column">
+        <div style="border: 1px solid black;">
+          
+        </div>
+      </div> -->
+
+    <!-- </div> -->
+
+    </div>
+
+<script data-id="new-category-input" type="text/template">
+  <span data-id="category-new">
+    <div class="ui input">
+      <input data-id="new-category-name" type="text" placeholder="Category Name">
+    </div>
+    <div class="ui buttons">
+      <div data-action="cancel-new-category" class="ui button">Cancel</div>
+      <div class="or"></div>
+      <div data-action="save-new-category" class="ui positive button">Save</div>
+    </div>
+  </span>
+</script>
+
+
+
+<script type="text/javascript" src="/bower_components/mustache/mustache.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="/bower_components/semantic-ui/dist/semantic.js"></script>
+<script type="text/javascript" src="/app.js"></script>
+</body>
+</html>

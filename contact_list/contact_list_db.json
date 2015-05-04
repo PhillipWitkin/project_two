@@ -1,0 +1,35 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Friends"
+    },
+    {
+      "name": "Musicians",
+      "id": 2
+    },
+    {
+      "name": "Coworkers",
+      "id": 3
+    },
+    {
+      "name": "enemies",
+      "id": 4
+    },
+    {
+      "name": "clients",
+      "id": 5
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "categorieId": 1,
+      "name": "NJP",
+      "city": "New York City",
+      "phone": "312-345-5421",
+      "email": "NJP3000@hotmail.com",
+      "image_url": "https://pbs.twimg.com/profile_images/1314994994/twitterpic_400x400.png"
+    }
+  ]
+}
