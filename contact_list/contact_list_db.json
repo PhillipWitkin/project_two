@@ -30,6 +30,24 @@
       "phone": "312-345-5421",
       "email": "NJP3000@hotmail.com",
       "image_url": "https://pbs.twimg.com/profile_images/1314994994/twitterpic_400x400.png"
+    },
+    {
+      "categorieId": 2,
+      "name": "Jerry Garcia",
+      "city": "San Franscisco",
+      "email": "",
+      "phone": "",
+      "image_url": "https://musicalstewdaily.files.wordpress.com/2008/08/jerry-garcia.jpg",
+      "id": 4
+    },
+    {
+      "categorieId": 2,
+      "name": "Phil Lesh",
+      "city": "San Francisco",
+      "email": "",
+      "phone": "",
+      "image_url": "http://www.thegroovelink.com/wp-content/uploads/2012/01/coverjuly21.jpg",
+      "id": 5
     }
   ]
 }
