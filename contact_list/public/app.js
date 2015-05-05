@@ -126,7 +126,7 @@ $('div[data-attr="contact-holder"]').on('click', '[data-action="create-contact"]
     var html = Mustache.render($contactDetailTemplate, contact)
     $('div[data-attr="contact-details"]').empty()
     $('div[data-attr="contact-details"]').append(html)//insert table of empty contact details
-    // var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
+
     var htmlImage = Mustache.render($contactImageTemplate, contact)
     $('div[data-attr="image-holder"]').empty()
     // $('div[data-attr="image-holder"]').append(htmlImage)//insert contact image
@@ -163,7 +163,7 @@ $('div[data-attr="contact-details"]').on('click', '[data-action="save-contact"]'
     var html = Mustache.render($contactDetailTemplate, contact)
     $('div[data-attr="contact-details"]').empty()
     $('div[data-attr="contact-details"]').append(html)//insert table of contact details
-    var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
+    // var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
     var htmlImage = Mustache.render($contactImageTemplate, contact)
     $('div[data-attr="image-holder"]').empty()
     $('div[data-attr="image-holder"]').append(htmlImage)//insert contact image
