@@ -8,7 +8,14 @@
   <!-- <link rel="stylesheet" href="animate.css"> -->
 </head>
 <body>
-  <h1>Testing...Hello world</h1>
+  <header style="text: auto align center">
+    <div class="ui segment centered">
+      <h1>Contact List</h1>
+      <h2>It works</h2>
+    </div>
+  </header>
+  
+
   <div class="ui grid">
     <div class="two column centered row">
       <div class="six wide column">
@@ -78,15 +85,9 @@
       </div>
 
       <div class="five wide column">
-          <div data-attr="contact-details" class="ui segment">
-        <!-- <div style="border: 1px solid black;"> -->
+          <div data-attr="contact-details" class="ui segment">      
           </div>
-          <!-- <div class="ui segment">
-            <div data-action="create-contact" class="fluid blue ui button">
-              Create New Contact
-            </div>
-          </div> -->
-        <!-- </div> -->
+
         <script data-attr="contact-detail-table">
           
             <table class="ui celled small table" data-id="{{id}}">
@@ -120,7 +121,7 @@
                 <tfoot class="five wide">
                   <tr>
                     <th colspan="2" class="five wide center aligned">
-                      <div class="ui small button">
+                      <div data-action="cancel-contact" class="ui small button">
                         Cancel
                       </div>
 
@@ -142,26 +143,17 @@
             </table>
         </script>
 
-
       </div>
 
       <div class="right floated column">
-        <div style="border: 1px solid black;">
+       <!--  <div style="border: 1px solid black;"> -->
           <div class="ui segment" data-attr="image-holder">
             <script type="text/javascript" data-attr="contact-image">
               <img class="ui small image centered" src="{{image_url}}">
             </script>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
-
-      <!-- <div class="column">
-        <div style="border: 1px solid black;">
-          
-        </div>
-      </div> -->
-
-    <!-- </div> -->
 
     </div>
 

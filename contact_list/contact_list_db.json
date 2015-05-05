@@ -48,6 +48,15 @@
       "phone": "",
       "image_url": "http://www.thegroovelink.com/wp-content/uploads/2012/01/coverjuly21.jpg",
       "id": 5
+    },
+    {
+      "categorieId": 2,
+      "name": "David Byrne",
+      "city": "",
+      "email": "",
+      "phone": "",
+      "image_url": "",
+      "id": 6
     }
   ]
 }

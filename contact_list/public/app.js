@@ -20,6 +20,8 @@ var $contactListTemplate = $('script[data-attr="contact-list-template"]').text()
 
 var $contactListItem = $('script[data-attr="contact-list-item"]').text()
 
+var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
+
 var $contactDetailTemplate = $('script[data-attr="contact-detail-table"]').text()
 
 
@@ -96,7 +98,7 @@ $contactListHolder.on('click', '[data-attr="individual-contact"]', function(even
     var html = Mustache.render($contactDetailTemplate, contact)
     $('div[data-attr="contact-details"]').empty()
     $('div[data-attr="contact-details"]').append(html)//insert table of contact details
-    var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
+    
     var htmlImage = Mustache.render($contactImageTemplate, contact)
     $('div[data-attr="image-holder"]').empty()
     $('div[data-attr="image-holder"]').append(htmlImage)//insert contact image
@@ -124,7 +126,7 @@ $('div[data-attr="contact-holder"]').on('click', '[data-action="create-contact"]
     var html = Mustache.render($contactDetailTemplate, contact)
     $('div[data-attr="contact-details"]').empty()
     $('div[data-attr="contact-details"]').append(html)//insert table of empty contact details
-    var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
+    // var $contactImageTemplate = $('script[data-attr="contact-image"]').text()
     var htmlImage = Mustache.render($contactImageTemplate, contact)
     $('div[data-attr="image-holder"]').empty()
     // $('div[data-attr="image-holder"]').append(htmlImage)//insert contact image
@@ -166,6 +168,21 @@ $('div[data-attr="contact-details"]').on('click', '[data-action="save-contact"]'
     $('div[data-attr="image-holder"]').empty()
     $('div[data-attr="image-holder"]').append(htmlImage)//insert contact image
   })
+
+  var categoryId = $('div[data-id="category-label"]').attr('data-value')
+  $.ajax({
+    method: "GET",
+    url: "/categories/" + categoryId + "/contacts"
+  }).done(function(contacts){
+    var listItems=[]
+    contacts.forEach(function(contact){
+    var html = Mustache.render($contactListItem, contact)
+    listItems.push(html)        
+  
+    $('div[data-id="contact-list"]').empty()
+    $('div[data-id="contact-list"]').append(listItems)
+    })
+  })
 }) 
 
 //delete contact
@@ -195,6 +212,12 @@ $('div[data-attr="contact-details"]').on('click', '[data-action="delete-contact"
     })
 
   })
+})
+
+//cancel contact
+$('div[data-attr="contact-details"]').on('click', '[data-action="cancel-contact"]', function(event){
+  $('div[data-attr="contact-details"]').empty()
+  $('div[data-attr="image-holder"]').empty()
 })
 
 //load list of categories
